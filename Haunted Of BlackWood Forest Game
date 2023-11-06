@@ -1,0 +1,225 @@
+class Player:
+    def __init__(self):
+        self.Position = 0
+
+    def MoveLeft(self):
+        if self.Position > 0:
+            self.Position -= 1
+
+    def MoveRight(self):
+        if self.Position < 9:
+            self.Position += 1
+
+
+def main():
+    Incident1 = "The fireflies lead you to a tranquil, moonlit glade, where you find an enchanted flute."
+    Incident2 = "You decide to approach the mysterious signpost.  The signpost points toward a dark, overgrown path that winds deeper into the forest. "
+    Incident3 = " If you decide to investigate the hidden message on the signpost:The message hints at a hidden cabin that holds the key to escaping the forest."
+    Incident4 = "you're searching for the hidden cabin: You find the cabin hidden deep in the forest. Inside, you discover a diary with cryptic writings."
+    Incident5 = " If you've chosen to investigate the hidden diary in the cabin:The diary leads you to a hidden tunnel beneath the cabin. "
+    Incident6 = "The fireflies scatter, revealing a shadowy figure standing at the edge of a clearing."
+    Incident7 = " If you choose to approach the shadowy figure in the moonlit glade:The figure introduces itself as Elara, a lost soul seeking help. She shares a disturbing legend about a haunted well and asks if you want to investigate. "
+    Incident8 = " If you've chosen to follow Elara's request and investigate the haunted well: "
+    Incident9 = "If you've decided to peer into the haunted well: The dark presence from the well envelops you, sending you into a nightmarish dimension"
+    Incident10 = " If you've decided to hide or confront the presence in the silent forest:Your decision to hide leads to a tense moment as the presence passes by. "
+
+    print(" Welcome To The Game, The Haunting Of Blackwood Forest:- ")
+    import time
+    time.sleep(3)
+    print("As you enter Blackwood Forest, an ancient woodland cloaked in mist and mystery, you feel a chilling presence all around you.")
+
+    O1 = "1: Follow the faint glow of fireflies that seems to lead deeper into the forest"
+    O2 = "2: Approach a mysterious, weathered signpost with faded directions. "
+    O3 = "3. Investigate The Path."
+    O4 = "4. You notice a hidden message etched on the back of the signpost. Read the message"
+    O5 = "5. Search for the cabin"
+    O6 = "6.The message warns of vengeful spirits guarding the forest. Proceed with caution. "
+    O7 = "7.Investigate Further"
+    O8 = "8.The forest becomes eerily silent, and you sense a presence nearby. Hide or confront it"
+    O9 = "9.Explore the tunnel"
+    O10 = "10.You find a map in the diary that seems to point to an exit. Follow the map. "
+    O11 = " 11.Approach the figure cautiously."
+    O12 = "12.Investigate"
+    O13 = "13.  You sense danger and draw your flashlight to reveal that the figure is a malevolent spirit. Prepare for a confrontation."
+    O14 = " 14. Elara guides you to the well, and as you peer inside, you feel a dark presence rising. "
+    O15 = " 15. Elara vanishes, and you are left alone by the well. Choose to stay or leave "
+    O16 = "16. Fight to escape or embrace it."
+    O17 = "17. You resist the dark presence, but it leaves you shaken. Climb out of the well and regroup with Elara. "
+    O18 = " 18. Stay hidden or follow it."
+    O19 = " 19. Confronting the presence reveals an ancient spirit seeking your help. Agree to help or refuse"
+    print(O1)
+    print(O2)
+    PlayerChoice0 = int(input())
+    if PlayerChoice0 == 1:
+        print(Incident1)
+        print(O2)
+        PlayerChoice1 = int(input())
+        if PlayerChoice1 == 2:
+            print(Incident2)
+
+            print(O4)
+            PlayerChoice2 = int(input())
+            if PlayerChoice2 == 4:
+                print(Incident3)
+                print(O5)
+                print(O6)
+                PlayerChoice3 = int(input())
+                if PlayerChoice3 == 5:
+                    print(Incident4)
+                    print(O7)
+                    print(O8)
+                    PlayerChoice4 = int(input())
+                    if PlayerChoice4 == 7:
+                        print(Incident5)
+                        print(O9)
+                        print(O10)
+                        PlayerChoice5 = int(input())
+                        if PlayerChoice5 == 9 or PlayerChoice5 == 10:
+                            print("New Chapter Begins")
+                    elif PlayerChoice4 == 8:
+                        print(O18)
+                        print(O19)
+                else:
+                    print("You Moves Further")
+            else:
+                raise ValueError("You Have Only One Option To Choose !!")
+        else:
+            raise ValueError("You Have Only One Option To Choose !!")
+    elif PlayerChoice0 == 2:
+        print(Incident2)
+        print(O11)
+        PlayerChoice2 = int(input())
+        if PlayerChoice2 == 11:
+            print(Incident7)
+            print(O12)
+            print(O13)
+            PlayerChoice3 = int(input())
+            if PlayerChoice3 == 12:
+                print(Incident8)
+                print(O14)
+                print(O15)
+                PlayerChoice4 = int(input())
+                if PlayerChoice4 == 14:
+                    print(Incident9)
+                elif PlayerChoice4 == 15:
+                    print("22. Stay !!")
+                    print("21. Leave ??")
+                    PlayerChoice5 = int(input())
+                    if PlayerChoice5 == 22:
+                        print("You Stayed.... Chapter Ends")
+                    elif PlayerChoice5 == 21:
+                        print("You Left By and SomeBody Call You From Behind.... Shhh..")
+            elif PlayerChoice3 == 13:
+                print("You Prepare Youself to Confront The Ghost Spirit...Chapter Ends...")
+    else:
+        raise ValueError("Invalid Choice")
+
+    Incident_11 = "11. Uncovering the Forest's Secrets"
+    Incident_12 = "12. The Whisper Leads You To The Chruch Where 100 Years Ago An Starvation Occurred"
+    Incident_13 = "13. As You Come Close To The Big giant Tree.. You Notice that the stems and Leaves of the tree were in Abnormal Big Size..."
+    Incident_14 = "14.  You Enter Into The Church... There Was Dark all around...You try to Open Up Your Torch, It doesn't Work... Suddenly Somebody Knock You Behind  "
+    Incident_15 = "15. You Feel Scared !! Stay There Or Ran ??"
+    Incident_16 = "16. Your Eyes Suddenly Catches A Demon Eating A Man Alive Sitting At The top of tree"
+    Incident_17 = "17. You Move Away From There... Towards The Flowing River "
+    Incident_18 = "18. You Raft To The City.... But Half The Way You notice the speed of boat was faster even you was the only guy pulling the Bamboos. Suddenly You Remember What was written on the Warning Boarn.. You Will Not Be Alone...."
+    Incident_19 = "19. You Ran Toward The Haunted Jungle !!"
+    Incident_20 = "20. You Notice That Leaves Have Eyes and Stems Slowly Grabbing You !!"
+    Incident_21 = "21.  There Was No One !!"
+    Incident_22 = "22. Spirit Narrates You The Story of the Chuch... 100 Years Ago her Sister died because of the Starvation in the city Valsenova.. And Her Dead Body Was Found Half eaten by a Man in the Room 306 Of church..."
+    Incident_23 = "23. You See That the Overgrown Tree got itself out of its Roots and Moving Towards You !!"
+    Incident_24 = "24. You Find Yourself Near An Overgrown Tree..."
+    O21 = "21. Follow the Whisper"
+    O22 = "22. Investigate That Overgrown Tree"
+    O23 = "23. Investigate The Church"
+    O24 = "24. Silently Listen to The Sound Of Bangles Coming Towards You... Shh..."
+    O25 = "25. Look Closely To The Tree !!"
+    O26 = "26. Read The Warning Sign.. {The Tree is in abnormal size its leaves grown almost to the size of an Man.. It's Cursed by a Demon "
+    O27 = "27. Look Behind Quickly !! "
+    O28 = "28. Attempt To Attack With The Sharp Edge Of Mirror In Hand !?? "
+    O29 = "29. Stay !! and Talk To Spirit !!"
+    O30 = "30. Ran Toward The Haunted Jungle !! "
+    O31 = "31. Ran Away !! "
+    O32 = "32. Look Again Closely On Leaves and Stems"
+    O33 = "33. You Find A Boat and A Sign Board On Which It Was Written (This River Is Going Towards the City Valsenova if you choose to take the board and try to Raft to the city.. You will not be alone throughout your journey...)"
+    O34 = "34. Look Behind..."
+    O35 = "35. Stay Silent..."
+    print(Incident_11)
+    print(O21)
+    print(O22)
+    PlayerInput1 = float(input())
+    if PlayerInput1 == 21:
+        print(Incident_12)
+        print(O23)
+        print(O24)
+        PlayerInput2 = float(input())
+        if PlayerInput2 == 23:
+            print(Incident_14)
+            print(O27)
+            print(O28)
+            PlayerInput4 = float(input())
+            if PlayerInput4 == 27:
+                print(Incident_21)
+            elif PlayerInput4 == 28:
+                print(Incident_21)
+        elif PlayerInput2 == 24:
+            print(Incident_15)
+            print(O29)
+            print(O30)
+            PlayerInput5 = float(input())
+            if PlayerInput5 == 29:
+                print(Incident_22)
+            elif PlayerInput5 == 30:
+                print(Incident_24)
+    elif PlayerInput1 == 22:
+        print(Incident_13)
+        print(O25)
+        print(O26)
+        PlayerInput3 = float(input())
+        if PlayerInput3 == 25:
+            print(Incident_16)
+            print(O31)
+            print(O32)
+            PlayerInput6 = float(input())
+            if PlayerInput6 == 31:
+                print(Incident_19)
+            elif PlayerInput6 == 32:
+                print(Incident_20)
+        elif PlayerInput3 == 26:
+            print(Incident_17)
+            print(O33)
+            print(O34)
+            PlayerInput7 = float(input())
+            if PlayerInput7 == 33:
+                print(Incident_18)
+            elif PlayerInput7 == 34:
+                print(Incident_23)
+    else:
+        raise ValueError("Invalid Choice")
+
+    print("You Escape The Haunted Blackwood Forest and Took A Boat To The City Valsenova... But You Remember There Was A Sign Board On Which It was Written That You'll Not be alone in the baot.. Suddenly You Notice someone behind you...")
+    time.sleep(2)
+    print(O34)
+    print(O35)
+    PlayerChoice10 = int(input())
+    if PlayerChoice10 == 34:
+        print("There Was An Escaped Man Behind.. Who Also Escaped the the Haunted Blackwood Forest")
+    else:
+        print("Now Navigate The Raft")
+    time.sleep(2.5)
+    print("Press L for Left & R For Right.")
+    print("The River Divides Into Two Parts further... Left Goes to Valsenova and Right Will Take You To City Gabon")
+    Choice = input()
+    PlayerChoice11 = input()
+    if PlayerChoice11 == "L":
+        print("Game Enter Into The Second Phase... The Walking Dead...")
+        time.sleep(2)
+        print("You Find Yourself In A Dead Down Where No Man Is Alive Only Zombies Are There...")
+        print("Navigate Your Player")
+    elif PlayerChoice11 == "R":
+        print("Successfully Escaped... Game Over")
+
+
+if __name__ == "__main__":
+    main()
+
+
